@@ -53,9 +53,9 @@ void init_target_properties()
 {
     std::string device;
 
-    device = property_get("ro.cm.device");
-    if (device != "tomato")
-        return;
+//    device = property_get("ro.cm.device");
+//    if (device != "tomato")
+//        return;
 
     char density[5];
     import_kernel_cmdline(0, import_cmdline);
