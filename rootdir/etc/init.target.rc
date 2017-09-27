@@ -46,6 +46,38 @@ on boot
     chown root system /sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable
     chmod 0660 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable
 
+    # Set Display's Colour Configuration to My Custom Profile (kCAL v2.0 Settings)---
+    write /sys/devices/platform/kcal_ctrl.0/kcal_min 32
+    write /sys/devices/platform/kcal_ctrl.0/kcal_sat 273
+    write /sys/devices/platform/kcal_ctrl.0/kcal_val 256
+    write /sys/devices/platform/kcal_ctrl.0/kcal_cont 256
+    write /sys/devices/platform/kcal_ctrl.0/kcal 256 256 256
+
+    # Enable Dynamic Fsync---
+    write/ sys/kernel/dyn_fsync/Dyn_fsync_active 1
+
+    # Configure Faux Sound Mod for better Audio---
+    write/ sys/kernel/sound_control_3/gpl_headphone_gain 4 4
+    write/ sys/kernel/sound_control_3/gpl_speaker_gain 11 11
+
+    # Configure ThunderCharge for Faster Charging---
+    write/ sys/kernel/thundercharge_control/enabled 1
+    write/ sys/kernel/thundercharge_control/custom_current 1290
+
+    # Enable Schedule Workqueues on awake CPUs to save power---
+    write /sys/module/workqueue/parameters/power_efficient Y
+
+    # Disable some Wakelocks to save power---
+    write /sys/module/wakeup/parameters/enable_msm_hsic_ws N
+    write /sys/module/wakeup/parameters/enable_wlan_rx_wake_ws N
+    write /sys/module/wakeup/parameters/enable_wlan_wake_ws N
+    write /sys/module/wakeup/parameters/enable_wlan_ctrl_wake_ws N
+    write /sys/module/wakeup/parameters/enable_ipa_ws N
+    write /sys/module/wakeup/parameters/enable_netlink_ws N
+    write /sys/module/wakeup/parameters/enable_timerfd_ws N
+    write /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws N
+    write /sys/module/wakeup/parameters/enable_bluedroid_timer_ws N
+
 service_redefine config_bt_addr /system/bin/btnvtool -b /system/bin/yl_btmac
     class core
     user bluetooth
