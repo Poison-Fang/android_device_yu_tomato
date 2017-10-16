@@ -20,4 +20,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Libshims
 PRODUCT_PACKAGES += \
    libshim_parcel \
-   libshim_boringssl
+   libshim_boringssl \
+   libshims_camera

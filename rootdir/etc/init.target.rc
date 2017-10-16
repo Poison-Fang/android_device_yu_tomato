@@ -55,7 +55,7 @@ service_redefine config_bt_addr /system/bin/btnvtool -b /system/bin/yl_btmac
 on init
 
     # Load custom symbols
-    export LD_SHIM_LIBS /system/vendor/lib64/lib-imsdpl.so|libshim_boringssl.so
+    export LD_SHIM_LIBS /system/vendor/lib64/lib-imsdpl.so|libshim_boringssl.so:/system/vendor/lib64/lib-imscamera.so|libshims_camera.so
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
