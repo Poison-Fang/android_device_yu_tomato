@@ -21,3 +21,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ims/imscm.xml:system/etc/permissions/imscm.xml \
     $(LOCAL_PATH)/configs/ims/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
 
+# Libshims
+PRODUCT_PACKAGES += \
+   libshim_parcel \
+   libshim_boringssl
+
