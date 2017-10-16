@@ -16,3 +16,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1
+
+# Libshims
+PRODUCT_PACKAGES += \
+   libshim_parcel \
+   libshim_boringssl
