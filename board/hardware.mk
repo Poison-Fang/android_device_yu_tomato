@@ -1,2 +1,2 @@
-# CMHW
-BOARD_HARDWARE_CLASS += device/yu/tomato/cmhw
+# LineageHW
+BOARD_HARDWARE_CLASS += device/yu/tomato/lineagehw
