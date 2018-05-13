@@ -67,6 +67,12 @@ TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 
+# Qualcomm Snapdragon CLANG
+ifneq ($(HOST_OS),darwin) 
+SDCLANG := true 
+SDCLANG_PATH := prebuilts/clang/host/linux-x86/clang-4053586/bin
+endif
+
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
