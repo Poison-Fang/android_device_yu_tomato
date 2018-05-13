@@ -77,6 +77,13 @@ TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 
+#Qualcomm SDllvm
+ifneq ($(HOST_OS),darwin) 
+SDCLANG := true 
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-4.0/bin 
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+endif
+
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
