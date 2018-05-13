@@ -38,3 +38,6 @@ persist.dbg.vt_avail_ovr=1
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
+
+# Deep Sleep
+pm.sleep_mode=1
