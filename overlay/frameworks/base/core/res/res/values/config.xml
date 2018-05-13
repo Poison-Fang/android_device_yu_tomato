@@ -142,4 +142,8 @@
          provisioning, availability etc -->
     <bool name="config_carrier_wfc_ims_available">true</bool>
 
+    <!-- RR-ify -->
+    <bool name="config_button_brightness_support">true</bool>
+    <integer name="config_button_brightness_default">128</integer>
+
 </resources>
