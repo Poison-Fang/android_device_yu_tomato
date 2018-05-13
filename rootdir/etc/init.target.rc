@@ -51,6 +51,9 @@ service baseband-sh /system/bin/sh /system/etc/set_baseband.sh
 
 on init
 
+    # Load custom symbols
+    export LD_SHIM_LIBS /system/vendor/lib64/lib-imsdpl.so|libshim_boringssl.so
+
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
