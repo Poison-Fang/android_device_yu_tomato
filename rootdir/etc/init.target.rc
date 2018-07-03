@@ -67,13 +67,6 @@ service imsdatadaemon /system/vendor/bin/imsdatadaemon
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio diag oem_2950 log inet
-   disabled
-
 service imscmservice /system/vendor/bin/imscmservice
    class main
    user system
@@ -82,7 +75,6 @@ service imscmservice /system/vendor/bin/imscmservice
    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
     start imscmservice
 
 service ims_trigger /system/etc/init.qti.ims.sh

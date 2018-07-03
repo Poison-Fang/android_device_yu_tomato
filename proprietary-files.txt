@@ -270,7 +270,6 @@ vendor/lib/libmdmdetect.so
 bin/imscmservice:vendor/bin/imscmservice
 bin/imsdatadaemon:vendor/bin/imsdatadaemon
 bin/imsqmidaemon:vendor/bin/imsqmidaemon
-bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon
 etc/permissions/imscm.xml:vendor/etc/permissions/imscm.xml
 etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 -framework/imscmlibrary.jar:vendor/framework/imscmlibrary.jar
