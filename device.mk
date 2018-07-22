@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
 
 # Telephony packages
 PRODUCT_PACKAGES += \
+    qti-telephony-common \
     ims-ext-common \
     telephony-ext
 
