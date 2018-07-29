@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Chargingspeed Thresholds -->
+
+    <!-- Threshold in micro watts below which a charger is rated as "slow"; 0.9A @ 5V -->
+    <integer name=" config_chargingSlowlyThreshold">4500000</integer>
+
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 1.2A @ 5V  -->
+    <integer name=" config_chargingFastThreshold">6000000</integer>
+
+    <bool name="config_currentampere">true</bool>
+</resources>
