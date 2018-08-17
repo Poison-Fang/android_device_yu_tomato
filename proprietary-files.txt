@@ -269,7 +269,6 @@ vendor/lib/libmdmdetect.so
 bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
-bin/ims_rtp_daemon
 etc/permissions/imscm.xml
 etc/permissions/qti_permissions.xml
 -framework/imscmlibrary.jar
